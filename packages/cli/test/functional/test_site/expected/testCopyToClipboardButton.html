@@ -10,7 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 4.0.2">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Popover initiated by trigger should honor trigger attribute</title>
+  <title>Copying code to clipboard should be done correctly</title>
   <link rel="stylesheet" href="/test_site/markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="/test_site/markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="/test_site/markbind/glyphicons/css/bootstrap-glyphicons.min.css">
@@ -21,7 +21,7 @@
   <script src="/test_site/markbind/js/polyfill.min.js"></script>
   <script src="/test_site/markbind/js/vue.min.js"></script>
   <script src="/test_site/markbind/js/markbind.min.js"></script>
-  <script src="testPopoverTrigger.page-vue-render.js"></script>
+  <script src="testCopyToClipboardButton.page-vue-render.js"></script>
   <script src="/test_site/markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="/test_site/plugins/testMarkbindPlugin/testMarkbindPluginStylesheet.css">
   <link rel="stylesheet" href="/test_site/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
@@ -207,15 +207,26 @@
         </div>
       </overlay-source>
       <div id="content-wrapper">
-        <p><strong>Popover initiated by trigger should honor trigger attribute</strong></p>
-        <popover id="pop:xp-user-stories" trigger="click">
-          popover
-          <template #content>
-            <div>
-              User stories
-            </div>
-          </template>
-        </popover>
+        <p><strong>Test: Copy to Clipboard Button</strong></p>
+        <p><strong>Hovering over the codeblock should display copyToClipboardButton</strong></p>
+        <pre><code class="line-numbers hljs" v-pre><span>Content in a code block
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn">
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "/>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre>
         <i class="fa fa-arrow-circle-up fa-lg d-print-none" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
       <overlay-source id="page-nav" tag-name="nav" to="page-nav">
