@@ -136,8 +136,8 @@
       "title": "Rendering of images according to specified dimension and auto-linkify ability"
     },
     {
-    "src": "testCopyToClipboardButton.md",
-    "title": "Copying code to clipboard should be done correctly"
+      "src": "testCopyToClipboardButton.md",
+      "title": "Copying code to clipboard should be done correctly"
     }
   ],
   "pagesExclude": ["**/*-fragment.md"],
