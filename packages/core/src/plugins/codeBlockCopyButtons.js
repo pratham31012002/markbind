@@ -39,9 +39,15 @@ const copyCodeBlockScript = `<script>
         textElement.value = codeElement.textContent;
         document.body.appendChild(textElement);
         textElement.select();
-
         document.execCommand('copy');
         document.body.removeChild(textElement);
+        const last = element.innerHTML;
+        element.innerHTML = 'Copied!';
+        element.disabled = true;
+        setTimeout(function () {
+            element.innerHTML = last;
+            element.disabled = false;
+        }.bind(element), 2000);
     }
     </script>`;
 
