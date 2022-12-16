@@ -40,14 +40,13 @@ function getButtonHTML() {
 }
 
 const copyCodeBlockScript = `<script>
-
-    function getCopiedIcon() {
+    function getAfterCopiedIcon() {
       const html = \`<div class="function-btn-body">
-        ${COPIED_ICON} Copied!
+        ${COPIED_ICON}&nbsp;Copied!
         </div>\`;
       return html;
     }
-     
+         
     function copyCodeBlock(element) {
         const pre = element.parentElement.parentElement;
         const codeElement = pre.querySelector('code');
@@ -62,7 +61,7 @@ const copyCodeBlockScript = `<script>
         
         // change icon for 2 seconds
         const last = element.innerHTML;
-        element.childNodes[1].innerHTML = getCopiedIcon();
+        element.childNodes[1].innerHTML = getAfterCopiedIcon();
         element.disabled = true;
         setTimeout(function () {
             element.innerHTML = last;
