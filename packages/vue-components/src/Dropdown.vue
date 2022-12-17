@@ -225,8 +225,20 @@ export default {
 
     .dropdown-toggle {
         cursor: pointer;
-        display: block;
-        width: max-content;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding-left: 1em;
+        padding-right: 1em;
+        justify-content: center;
+    }
+
+    .dropdown {
+        padding: 0;
+    }
+
+    .btn {
+        height: inherit;
     }
 
     .navbar .dropdown-toggle {
